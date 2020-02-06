@@ -263,6 +263,7 @@ p {
   align-items: center;
   flex-basis: calc(25% - 22.5px);
   margin-right: 30px;
+  position: relative;
 }
 
 .about__item:nth-last-child(1) {
@@ -277,6 +278,7 @@ p {
   background-size: contain;
   margin-bottom: 60px;
 }
+
 .about__item--safe {
   background-image: url(../images/icons/safe.png);
   height: 60px;
@@ -446,7 +448,6 @@ p {
 }
 
 .action__button {
-  background-image: url(../images/icons/hurt.png);
   background-repeat: no-repeat;
   background-size: 25px 25px;
   background-position: center;
@@ -463,12 +464,15 @@ p {
   display: flex;
   justify-content: flex-end;
   padding-right: 20px;
-
   transition: background-color 250ms
     cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.action__button:nth-last-child(1) {
+.action__button--hurt {
+  background-image: url(../images/icons/hurt.png);
+}
+
+.action__button--basket {
   background-image: url(../images/icons/basket.png);
   margin-top: 10px;
   width: 167px;
@@ -476,11 +480,11 @@ p {
   background-position-x: 15px;
 }
 
-.action__button:nth-child(2) {
+.action__button--arrow {
   background-image: url(../images/icons/arrow.png);
 }
 
-.action__button:nth-child(3) {
+.action__button--clock {
   background-image: url(../images/icons/clock.png);
 }
 
@@ -669,7 +673,7 @@ p {
   margin-bottom: 17px;
 }
 
-.blog__button {
+.blog__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -685,7 +689,7 @@ p {
   border-radius: 3px;
   border: 0px;
 }
-.blog__button:hover {
+.blog__link:hover {
   opacity: 0.6;
 }
 
